@@ -232,9 +232,19 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yap.
 İPUCU - .includes() methoduna bakabilirsin. (https://www.w3schools.com/jsref/jsref_includes.asp)
 */
 
-function sesliHarfSayaci(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function sesliHarfSayaci(text) {
+  let sesliHarfler = ["a","c","ç","e","ı","i","o","ö","s","ş","u","ü","A","C","Ç","E","I","İ","O","Ö","S","Ş","U","Ü"];
+  let depo = 0;
+  for(let i=0 ; i<text.length ; i++){
+    for(let j=0 ; j<sesliHarfler.length; j++){
+      if (text.includes(sesliHarfler[j])){
+        depo ++
+      }
+    }
+  }
+  return depo;
 }
+console.log(sesliHarfSayaci("Gizem"));
 
 /* Lütfen bu satırın alt tarafını değiştirmeyin */
 function sa() {
