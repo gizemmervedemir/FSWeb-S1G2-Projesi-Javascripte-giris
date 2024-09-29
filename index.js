@@ -38,10 +38,10 @@ Aşağıdakileri yap:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
-let birinciDeger = 5 ;
-let ikinciDegeri = 9;
+let birinciDeger = 9 ;
+let ikinciDegeri = 5 ;
 if(birinciDeger >= ikinciDegeri){
-  birinciDeger = birinciDeger + 5;
+  birinciDeger = ikinciDegeri + 5;
 }
 console.log(birinciDeger);
 
