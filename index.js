@@ -38,6 +38,13 @@ Aşağıdakileri yap:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
+let birinciDeger = 5 ;
+let ikinciDegeri = 9;
+if(birinciDeger >= ikinciDegeri){
+  birinciDeger = birinciDeger + 5;
+}
+console.log(birinciDeger);
+
 /*
 Görev 1c - String bir değeri Number'a dönüştürün (puanlamaya dahil değildir)
 
