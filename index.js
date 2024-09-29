@@ -56,6 +56,10 @@ Aşağıdakileri yap:
    İPUCU: Number metoduna bakabilirsin
 */
 
+let x = "1999";
+let newX= Number(x);
+console.log(newX);
+
 /*
 Görev 1d - Çarpma
  
