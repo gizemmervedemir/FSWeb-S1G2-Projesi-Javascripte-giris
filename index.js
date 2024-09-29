@@ -152,9 +152,11 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamla:
 */
 
 function milDonusturucu(km) {
-  let mil = km / 1.609344 ;
-  return mil;
+  let mil = km / 1.609344;
+  mil = mil.toFixed(5);
+  return Number(mil);
 }
+console.log(milDonusturucu(10));
 
 //Görev 4b - Santimetreden Feet
 /*
@@ -167,9 +169,10 @@ Google'da arama ipucu: "feet cm dönüştürme"
 */
 
 function feetDonusturucu(cm) {
-  let feet = cm * 0.032808;
-  return feet;
+  let feet = cm / 30.48;
+  return Number(feet);
 }
+console.log(feetDonusturucu(10));
 
 /* Görev 5 : 5 küçük maymun yatakta zıplamış şarkısını çocuklar için hazırladığımı varsayalım. https://www.youtube.com/watch?v=e4EJ34xnlxk */
 
@@ -185,11 +188,13 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yap:
 */
 
 function cocukSarkisi(maymun) {
-  for(let i=0 ; i<maymun ;i++) {
-    maymun--;
-  }
-  console.log(` ${maymun}  küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!`);
- }
+  return `${maymun} küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!` ;
+ } 
+ let monkey = 5;
+ while(monkey>0) {
+  console.log(cocukSarkisi(monkey));
+  monkey--;
+}
 
 /* Görev 6 : Not Hesaplayıcı */
 
@@ -233,14 +238,14 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yap.
 */
 
 function sesliHarfSayaci(text) {
-  let sesliHarfler = ["a","c","ç","e","ı","i","o","ö","s","ş","u","ü","A","C","Ç","E","I","İ","O","Ö","S","Ş","U","Ü"];
+  let sesliHarfler = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
   let depo = 0;
   for(let i=0 ; i<text.length ; i++){
-    for(let j=0 ; j<sesliHarfler.length; j++){
-      if (text.includes(sesliHarfler[j])){
-        depo ++
-      }
+
+    if (text.includes(sesliHarfler[i])){
+      depo ++
     }
+    
   }
   return depo;
 }
