@@ -206,9 +206,20 @@ Aşağdakileri notHesapla fonksiyonunda yap.
  dönün
 */
 
-function notHesapla(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function notHesapla(not = Math.floor(Math.random()* 101)) {
+  if(not>89 && not<=100){
+    return "A aldın";
+  } else if(not>79 && not<90){
+    return "B aldın";
+  } else if(not>69 && not<80) {
+    return "C aldın";
+  } else if(not>59 && not<70) {
+    return "D aldın";
+  } else {
+    return "F aldın";
+  }
 }
+console.log(notHesapla(66));
 
 /* Bonus Çalışma: Sesli harf sayacı - Kaç tane sesli harf var? */
 
